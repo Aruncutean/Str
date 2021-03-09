@@ -1,0 +1,29 @@
+package L3.Ex5;
+
+import java.io.PipedOutputStream;
+
+public class FirScriitor extends Thread {
+
+    private PipedOutputStream po;
+
+    FirScriitor() {
+        po = new PipedOutputStream();
+    }
+
+    public void run() {
+        try {
+            while (true) {
+                int d = (int) (10 * Math.random());
+                System.out.println("Fir scriitor trimite : " + d);
+                po.write(d);
+                sleep(400);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    PipedOutputStream getPipe() {
+        return po;
+    }
+}
