@@ -19,6 +19,13 @@ public class Fir implements Runnable {
         }
     }
 
+    public void join() {
+        try {
+            this.join();
+        } catch (StackOverflowError e) {
+        }
+    }
+
     @Override
     public void run() {
         int sum = 0;
@@ -28,7 +35,12 @@ public class Fir implements Runnable {
         }
         sumTot = sumTot + sum;
         System.out.println("Name thread: " + thread.getName() + " Sum: " + sum);
-        System.out.println("Sum Tot "+sumTot);
+
     }
+
+    public int getSumTot() {
+        return sumTot;
+    }
+
 
 }

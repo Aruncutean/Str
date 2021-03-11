@@ -10,5 +10,11 @@ public class Main {
         fir1.start();
         fir2.start();
         fir3.start();
+
+        fir1.join();
+        fir2.join();
+        fir3.join();
+
+        System.out.println(fir3.getSumTot());
     }
 }
