@@ -2,11 +2,12 @@ package L3.P1;
 
 public class Fir implements Runnable {
 
+    private static int sumTot;
     private int N;
     private int pas;
     private Thread thread;
 
-    Fir(int N, int pas) {
+    public Fir(int N, int pas) {
         this.N = N;
         this.pas = pas;
     }
@@ -25,8 +26,9 @@ public class Fir implements Runnable {
         for (int i = 0; i < N; i = i + pas) {
             sum = sum + i;
         }
-
+        sumTot = sumTot + sum;
         System.out.println("Name thread: " + thread.getName() + " Sum: " + sum);
+        System.out.println("Sum Tot "+sumTot);
     }
 
 }
