@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-         Resursa monitor1=new Resursa();
+        Resursa monitor1=new Resursa();
         Resursa monitor2 = new Resursa();
         Fir1 fir1 = new Fir1(monitor1,monitor2, 2, 3);
         Fir2 fir2 = new Fir2(monitor1, 3, 5);

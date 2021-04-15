@@ -5,13 +5,12 @@ public class Fir2 extends Thread {
     Resursa monitor;
 
     int activity_min, activity_max;
-    Resursa resursa;
+
 
     public Fir2( Resursa monitor, int activity_min, int activity_max) {
         this.monitor = monitor;
         this.activity_min = activity_min;
         this.activity_max = activity_max;
-        this.resursa = resursa;
 
     }
 
